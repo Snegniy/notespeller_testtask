@@ -1,4 +1,4 @@
-# Ozon Test Task - Link Shortener
+# Note Speller - Test task
 
 # Содержание
 1. [Задача](#Задача)
