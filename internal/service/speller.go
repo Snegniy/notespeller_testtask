@@ -1,6 +1,7 @@
 package service
 
 import (
+	"errors"
 	"fmt"
 	"github.com/Snegniy/notespeller-testtask/pkg/logger"
 	"go.uber.org/zap"
@@ -11,7 +12,7 @@ import (
 
 func speller(s string) error {
 	temp := strings.ReplaceAll(s, " ", "+")
-	//url := fmt.Sprintf("https://speller.yandex.net/services/spellservice.json/checkText?text=%s", rawNote)
+
 	url := fmt.Sprintf("https://speller.yandex.net/services/spellservice.json/checkText?text=%s", temp)
 	resp, err := http.Get(url)
 	if err != nil {
@@ -27,7 +28,7 @@ func speller(s string) error {
 	}
 
 	if len(body) > 2 {
-		return fmt.Errorf("spelling error: %s", string(body))
+		return errors.New("spelling error in the message")
 	}
 	return nil
 }

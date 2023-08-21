@@ -1,4 +1,4 @@
-package graceful
+package server
 
 import (
 	"context"

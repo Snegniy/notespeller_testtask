@@ -15,7 +15,7 @@ func generatePasswordHash(password string) (string, error) {
 	return string(hashedPassword), nil
 }
 
-func checkPasswordHash(password, hash string) bool {
+func checkPasswordHash(hash, password string) bool {
 	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
 	if err != nil {
 		logger.Error("checkPasswordHashError", zap.Error(err))

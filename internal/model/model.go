@@ -3,7 +3,7 @@ package model
 type User struct {
 	Id       int    `json:"id" db:"id"`
 	Username string `json:"username" db:"username"`
-	Password string `json:"password_hash" db:"password_hash"`
+	Password string `json:"password" db:"password_hash"`
 }
 
 type Note struct {

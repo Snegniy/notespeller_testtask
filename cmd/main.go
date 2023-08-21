@@ -6,10 +6,11 @@ import (
 	"github.com/Snegniy/notespeller-testtask/internal/handlers"
 	"github.com/Snegniy/notespeller-testtask/internal/service"
 	"github.com/Snegniy/notespeller-testtask/internal/storage/postgres"
-	"github.com/Snegniy/notespeller-testtask/pkg/graceful"
 	"github.com/Snegniy/notespeller-testtask/pkg/logger"
+	"github.com/Snegniy/notespeller-testtask/pkg/server"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
+	"github.com/go-chi/jwtauth/v5"
 	"go.uber.org/zap"
 	"net/http"
 )
@@ -31,14 +32,20 @@ func main() {
 	h := handlers.NewHandlers(s)
 
 	Register(r, h)
-	graceful.StartServer(r, cfg.ServerPort)
+	server.StartServer(r, cfg.ServerPort)
 
 }
 func Register(r *chi.Mux, h *handlers.Handlers) {
 	r.Post("/login", h.Login)
 	r.Post("/register", h.Register)
-	r.Post("/", h.AddNote)
-	r.Get("/", h.GetNotes)
+	r.Get("/logout", h.Logout)
+
+	r.Group(func(r chi.Router) {
+		r.Use(jwtauth.Verifier(h.TokenAuth))
+		r.Use(jwtauth.Authenticator)
+		r.Post("/", h.AddNote)
+		r.Get("/", h.GetNotes)
+	})
 
 	//SwaggerUI
 	r.Get("/swagger", api.SwaggerUI)

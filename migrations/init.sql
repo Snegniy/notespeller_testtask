@@ -5,9 +5,9 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 INSERT INTO users (username, password_hash) VALUES
-('Sergey', '$2a$10$o5gF65.0CTWA4s/35uU3yeIMeCcXHKGkAL.vhoAhgA1mD.yCXJKiS'),  --12345
-('Jessie', 'Diggins'),
-('Gofer', 'golang');
+('Sergey', '$2a$10$hemvLnUXcbRjX9wcNnqrZeah6QwWIYl2oQFKv2hzx8OHoSuftzbfa'),  --12345
+('Jessie', '$2a$10$19YtWEKTW6Ior2ggM9.shuqOjnHY.6irrwsy4CdF7L0cNF52VCRpS'), --Diggins
+('Gofer', '$2a$10$DTpHHK2u3CDkPrZxpBu/9uX3K/YG0RPxNTTb8d4vOAFlt2Gy4TioS'); --golang
 
 CREATE TABLE IF NOT EXISTS notes (
     id SERIAL PRIMARY KEY,
@@ -21,6 +21,6 @@ INSERT INTO notes (userid, note) VALUES
 (2, 'Second note'),
 (3, 'Third note');
 
-CREATE INDEX IF NOT EXISTS idx_notes_userid ON notes(userid);
+CREATE INDEX IF NOT EXISTS notes_userid_idx ON notes(userid);
 
 
