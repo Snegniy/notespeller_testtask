@@ -34,7 +34,6 @@ func (s *Service) UserLogin(ctx context.Context, username, password string) (mod
 		logger.Warn("login failed", zap.String("username", username))
 		return model.User{}, errors.New("password not correct")
 	}
-	// TODO: writeJSON(w, res)
 	return res, nil
 }
 
