@@ -1,11 +1,11 @@
 # Note Speller - Test task
 
 # Содержание
-1. [Задача](#Задача)
-2. [Скачивание приложения](#Installation)
-3. [Команды для запуска](#Command)
-4. [Структура приложения](#Structure)
-5. [Описание HTTP API](#HTTP)
+1. [Задача](#задача)
+2. [Скачивание приложения](#installation)
+3. [Команды для запуска](#command)
+4. [Структура приложения](#structure)
+5. [Описание HTTP API](#endpoints)
 
 ## Задача
 
@@ -64,7 +64,7 @@ make
 ├── Makefile
 ```
 
-## HTTP
+## Endpoints
 При дефолтных настройках сервер доступен по localhost:8000
 #### /register
 * `POST` /register 
