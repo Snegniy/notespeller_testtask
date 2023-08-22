@@ -21,7 +21,7 @@ INSERT INTO notes (userid, note) VALUES
 (1, 'I like it!'),
 (2, 'Second note'),
 (2, 'I LOVE SKI'),
-(3, 'Third note');
+(3, 'Third note'),
 (3, 'Golang is cool!');
 
 CREATE INDEX IF NOT EXISTS notes_userid_idx ON notes(userid);
