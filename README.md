@@ -6,6 +6,7 @@
 3. [Команды для запуска](#command)
 4. [Структура приложения](#structure)
 5. [Описание HTTP API](#endpoints)
+6. [Тесты приложения](#tests)
 
 ## Task
 
@@ -84,4 +85,20 @@ make
 
 #### /note
 * `GET` /note - Вывод заметок пользователя
+
+## Tests
+
+Для проверки работоспособности приложения используется [Postman коллекция](https://github.com/Snegniy/notespeller_testtask/blob/main/Note-Speller.postman_collection.json) тестовых запросов или [test.http](https://github.com/Snegniy/notespeller_testtask/blob/main/test.http)
+
+При старте приложения в базу добавляется три предустановленных пользователя.
+У каждого пользователя создается по две заметки
+
+* LOGIN: Sergey
+* PASSWORD: 12345
+* 
+* LOGIN: Jessie
+* PASSWORD: Diggins
+* 
+* LOGIN: Gofer
+* PASSWORD: golang
 
