@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/Snegniy/notespeller-testtask/api"
 	"github.com/Snegniy/notespeller-testtask/internal/config"
 	"github.com/Snegniy/notespeller-testtask/internal/handlers"
 	"github.com/Snegniy/notespeller-testtask/internal/service"
@@ -12,7 +11,6 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/jwtauth/v5"
 	"go.uber.org/zap"
-	"net/http"
 )
 
 func main() {
@@ -43,13 +41,8 @@ func Register(r *chi.Mux, h *handlers.Handlers) {
 	r.Group(func(r chi.Router) {
 		r.Use(jwtauth.Verifier(h.TokenAuth))
 		r.Use(jwtauth.Authenticator)
-		r.Post("/", h.AddNote)
-		r.Get("/", h.GetNotes)
+		r.Post("/note", h.AddNote)
+		r.Get("/note", h.GetNotes)
 	})
 
-	//SwaggerUI
-	r.Get("/swagger", api.SwaggerUI)
-	r.Get("/public/*", func(w http.ResponseWriter, r *http.Request) {
-		http.StripPrefix("/public/", http.FileServer(http.Dir("./public"))).ServeHTTP(w, r)
-	})
 }

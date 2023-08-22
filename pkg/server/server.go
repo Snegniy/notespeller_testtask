@@ -11,16 +11,16 @@ import (
 	"time"
 )
 
-func StartServer(r *chi.Mux, host string) {
+func StartServer(r *chi.Mux, port string) {
 	logger.Debug("Start app server")
 
 	srv := &http.Server{
-		Addr:    ":" + host,
+		Addr:    ":" + port,
 		Handler: r,
 	}
 
 	go func() {
-		logger.Info("Server started", zap.String("host:port", host))
+		logger.Info("Server started", zap.String("port", port))
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			logger.Fatal("listen:", zap.Error(err))
 		}

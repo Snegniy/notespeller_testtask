@@ -34,7 +34,7 @@ func NewHandlers(srv Services) *Handlers {
 }
 
 func (h *Handlers) Login(w http.ResponseWriter, r *http.Request) {
-	body := model.User{}
+	var body model.User
 
 	err := json.NewDecoder(r.Body).Decode(&body)
 	if err != nil {
@@ -91,7 +91,7 @@ func (h *Handlers) Logout(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *Handlers) Register(w http.ResponseWriter, r *http.Request) {
-	body := model.User{}
+	var body model.User
 
 	err := json.NewDecoder(r.Body).Decode(&body)
 	if err != nil {

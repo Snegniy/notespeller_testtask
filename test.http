@@ -1,0 +1,109 @@
+### Попытка добавить запиcь не залогинившись
+
+POST http://localhost:8000/note
+Content-Type: application/json
+
+{
+  "note":"Hello World!"
+}
+
+### Попытка получить заметки не залогинившись
+
+GET http://localhost:8000/note
+
+### Регистрация пользователя
+
+POST http://localhost:8000/register
+Content-Type: application/json
+
+{
+  "username":"Test User",
+  "password":"qwerty"
+}
+
+### Попытка регистрации пользователя с неуникальным именем
+
+POST http://localhost:8000/register
+Content-Type: application/json
+
+{
+  "username":"Test User",
+  "password":"qwerty"
+}
+
+### Попытка залогиниться с неправильным паролем
+
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "username":"Test User",
+  "password":"asdf"
+}
+
+### Логин пользователя
+
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "username":"Test User",
+  "password":"qwerty"
+}
+
+### Получение списка заметок, в котором ничего нет
+
+GET http://localhost:8000/note
+
+### Добавление заметки - 1
+
+POST http://localhost:8000/note
+Content-Type: application/json
+
+{
+  "note":"Hello World!"
+}
+
+###  Добавление заметки - 2
+
+POST http://localhost:8000/note
+Content-Type: application/json
+
+{
+  "note":"Hello Golang!"
+}
+
+### Попытка добавления заметки с орфографическими ошибками
+
+POST http://localhost:8000/note
+Content-Type: application/json
+
+{
+  "note":"Превет"
+}
+
+### Получение списка заметок
+
+GET http://localhost:8000/note
+
+### Разлогин пользователя
+
+GET http://localhost:8000/logout
+
+### Логин в предустановленного пользователя
+
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "username":"Sergey",
+  "password":"12345"
+}
+
+### Получение списка заметок предустановленного пользователя
+
+GET http://localhost:8000/note
+
+### Разлогин пользователя
+
+GET http://localhost:8000/logout

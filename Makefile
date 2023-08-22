@@ -11,12 +11,5 @@ local:
 stop:
 	docker compose down --remove-orphans
 
-.PHONY: test
-test:
-	go test -v -race -cover ./...
-
-.PHONY: generate
-generate:
-	go generate ./...
 
 .DEFAULT_GOAL := run

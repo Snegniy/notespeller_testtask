@@ -1,13 +1,13 @@
 # Note Speller - Test task
 
 # Содержание
-1. [Задача](#задача)
+1. [Задача](#task)
 2. [Скачивание приложения](#installation)
 3. [Команды для запуска](#command)
 4. [Структура приложения](#structure)
 5. [Описание HTTP API](#endpoints)
 
-## Задача
+## Task
 
 (кратко) создать REST сервис добавления и просмотра заметок
 
@@ -62,6 +62,7 @@ make
 ├── Dockerfile
 ├── go.mod
 ├── Makefile
+├── Note-Speller.postman_collection.json // набор тестовых запросов для Postman
 ```
 
 ## Endpoints
@@ -77,10 +78,10 @@ make
 #### /logout
 * `GET` /logout - Выход из профиля
 
-#### /
-* `POST` /
+#### /note
+* `POST` /note
 * `{"note":"(string)" }`   - Добавление заметки
 
-#### /
-* `GET` / - Вывод заметок пользователя
+#### /note
+* `GET` /note - Вывод заметок пользователя
 

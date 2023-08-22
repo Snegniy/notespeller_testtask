@@ -21,14 +21,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/",
+					"raw": "http://localhost:8000/note",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						""
+						"note"
 					]
 				}
 			},
@@ -40,14 +40,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/",
+					"raw": "http://localhost:8000/note",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						""
+						"note"
 					]
 				}
 			},
@@ -173,14 +173,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/",
+					"raw": "http://localhost:8000/note",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						""
+						"note"
 					]
 				}
 			},
@@ -201,14 +201,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/",
+					"raw": "http://localhost:8000/note",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						""
+						"note"
 					]
 				}
 			},
@@ -229,14 +229,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/",
+					"raw": "http://localhost:8000/note",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						""
+						"note"
 					]
 				}
 			},
@@ -257,14 +257,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/",
+					"raw": "http://localhost:8000/note",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						""
+						"note"
 					]
 				}
 			},
@@ -276,14 +276,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/",
+					"raw": "http://localhost:8000/note",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						""
+						"note"
 					]
 				}
 			},
@@ -342,14 +342,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/",
+					"raw": "http://localhost:8000/note",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
-						""
+						"note"
 					]
 				}
 			},
